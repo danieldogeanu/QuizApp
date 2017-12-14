@@ -49,77 +49,44 @@
 
         <RelativeLayout
             android:id="@+id/quiz_card_one"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:padding="16dp"
-            android:background="@drawable/card_bg" >
+            style="@style/QuizCard" >
 
             <TextView
                 android:id="@+id/quiz_icon_one"
-                android:layout_width="35dp"
-                android:layout_height="35dp"
-                android:layout_marginTop="5dp"
-                android:background="@drawable/quiz_circle"
                 android:text="1"
-                android:textSize="18sp"
-                android:textColor="@color/secondaryTextColor"
-                android:fontFamily="sans-serif-medium"
-                android:gravity="center" />
+                style="@style/QuizIcon" />
 
             <TextView
                 android:id="@+id/question_one"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="16dp"
                 android:layout_toRightOf="@id/quiz_icon_one"
                 android:text="What's the highest mountain on Mars?"
-                android:textSize="18sp"
-                android:textColor="@color/primaryTextColor" />
+                style="@style/QuizQuestion" />
 
             <View
                 android:id="@+id/divider_one"
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginBottom="16dp"
                 android:layout_below="@id/question_one"
-                android:background="@color/secondaryTextColor" />
+                style="@style/QuizDivider" />
 
             <RadioGroup
                 android:id="@+id/radio_group_one"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="16dp"
                 android:layout_below="@id/divider_one"
-                android:layout_toRightOf="@id/quiz_icon_one">
+                android:layout_toRightOf="@id/quiz_icon_one"
+                style="@style/QuizRadioGroup" >
 
                 <RadioButton
                     android:id="@+id/radio_mauna_kea"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:paddingLeft="3dp"
                     android:text="Mauna Kea"
-                    android:textSize="15sp"
-                    android:textColor="@color/primaryColor" />
+                    style="@style/QuizRadioButton" />
 
                 <RadioButton
                     android:id="@+id/radio_arsia_mons"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:paddingLeft="3dp"
                     android:text="Arsia Mons"
-                    android:textSize="15sp"
-                    android:textColor="@color/primaryColor" />
+                    style="@style/QuizRadioButton" />
 
                 <RadioButton
                     android:id="@+id/radio_olympus_mons"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:paddingLeft="3dp"
                     android:text="Olympus Mons"
-                    android:textSize="15sp"
-                    android:textColor="@color/primaryColor" />
+                    style="@style/QuizRadioButton" />
 
             </RadioGroup>
 
