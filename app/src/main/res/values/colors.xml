@@ -12,5 +12,5 @@
     <color name="secondaryDarkColor">#af2b00</color>
     <color name="primaryTextColor">#141414</color>
     <color name="secondaryTextColor">#f1f1f1</color>
-    <color name="cardBackground">#cccccc</color>
+    <color name="cardBackground">#dedede</color>
 </resources>
