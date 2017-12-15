@@ -202,33 +202,34 @@
                 android:layout_below="@id/question_four"
                 style="@style/QuizDivider" />
 
-            <RadioGroup
-                android:id="@+id/radio_group_four"
+            <LinearLayout
+                android:id="@+id/check_group_four"
                 android:layout_below="@id/divider_four"
                 android:layout_toRightOf="@id/quiz_icon_four"
+                android:orientation="vertical"
                 style="@style/QuizRadioGroup" >
 
-                <RadioButton
-                    android:id="@+id/radio_four_a"
+                <CheckBox
+                    android:id="@+id/check_four_a"
                     android:text="@string/question_four_a"
                     style="@style/QuizRadioButton" />
 
-                <RadioButton
-                    android:id="@+id/radio_four_b"
+                <CheckBox
+                    android:id="@+id/check_four_b"
                     android:text="@string/question_four_b"
                     style="@style/QuizRadioButton" />
 
-                <RadioButton
-                    android:id="@+id/radio_four_c"
+                <CheckBox
+                    android:id="@+id/check_four_c"
                     android:text="@string/question_four_c"
                     style="@style/QuizRadioButton" />
 
-                <RadioButton
-                    android:id="@+id/radio_four_d"
+                <CheckBox
+                    android:id="@+id/check_four_d"
                     android:text="@string/question_four_d"
                     style="@style/QuizRadioButton" />
 
-            </RadioGroup>
+            </LinearLayout>
 
         </RelativeLayout>
 
@@ -342,38 +343,39 @@
                 android:layout_below="@id/question_seven"
                 style="@style/QuizDivider" />
 
-            <RadioGroup
-                android:id="@+id/radio_group_seven"
+            <LinearLayout
+                android:id="@+id/check_group_seven"
                 android:layout_below="@id/divider_seven"
                 android:layout_toRightOf="@id/quiz_icon_seven"
+                android:orientation="vertical"
                 style="@style/QuizRadioGroup" >
 
-                <RadioButton
-                    android:id="@+id/radio_seven_a"
+                <CheckBox
+                    android:id="@+id/check_seven_a"
                     android:text="@string/question_seven_a"
                     style="@style/QuizRadioButton" />
 
-                <RadioButton
-                    android:id="@+id/radio_seven_b"
+                <CheckBox
+                    android:id="@+id/check_seven_b"
                     android:text="@string/question_seven_b"
                     style="@style/QuizRadioButton" />
 
-                <RadioButton
-                    android:id="@+id/radio_seven_c"
+                <CheckBox
+                    android:id="@+id/check_seven_c"
                     android:text="@string/question_seven_c"
                     style="@style/QuizRadioButton" />
 
-                <RadioButton
-                    android:id="@+id/radio_seven_d"
+                <CheckBox
+                    android:id="@+id/check_seven_d"
                     android:text="@string/question_seven_d"
                     style="@style/QuizRadioButton" />
 
-                <RadioButton
-                    android:id="@+id/radio_seven_e"
+                <CheckBox
+                    android:id="@+id/check_seven_e"
                     android:text="@string/question_seven_e"
                     style="@style/QuizRadioButton" />
 
-            </RadioGroup>
+            </LinearLayout>
 
         </RelativeLayout>
 
