@@ -31,7 +31,7 @@
                 android:layout_alignParentTop="true"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="24dp"
-                android:text="Mars Quiz"
+                android:text="@string/app_title"
                 android:textSize="28sp" />
 
             <TextView
@@ -42,7 +42,7 @@
                 android:layout_marginBottom="16dp"
                 android:background="@drawable/progress_bg"
                 android:gravity="center"
-                android:text="4/6"
+                android:text="4/7"
                 android:textSize="20sp" />
 
         </RelativeLayout>
@@ -59,7 +59,7 @@
             <TextView
                 android:id="@+id/question_one"
                 android:layout_toRightOf="@id/quiz_icon_one"
-                android:text="What's the highest mountain on Mars?"
+                android:text="@string/question_one"
                 style="@style/QuizQuestion" />
 
             <View
@@ -74,18 +74,18 @@
                 style="@style/QuizRadioGroup" >
 
                 <RadioButton
-                    android:id="@+id/radio_mauna_kea"
-                    android:text="Mauna Kea"
+                    android:id="@+id/radio_one"
+                    android:text="@string/question_one_a"
                     style="@style/QuizRadioButton" />
 
                 <RadioButton
-                    android:id="@+id/radio_arsia_mons"
-                    android:text="Arsia Mons"
+                    android:id="@+id/radio_two"
+                    android:text="@string/question_one_b"
                     style="@style/QuizRadioButton" />
 
                 <RadioButton
-                    android:id="@+id/radio_olympus_mons"
-                    android:text="Olympus Mons"
+                    android:id="@+id/radio_three"
+                    android:text="@string/question_one_c"
                     style="@style/QuizRadioButton" />
 
             </RadioGroup>
