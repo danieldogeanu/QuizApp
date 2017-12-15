@@ -7,7 +7,7 @@
     <string name="question_one_b">Arsia Mons</string>
     <string name="question_one_c">Olympus Mons</string>
 
-    <string name="question_two">Mars is the ___ planet from the Sun.</string>
+    <string name="question_two">Mars is the _ planet from the Sun.</string>
     <string name="question_two_a">Second</string>
     <string name="question_two_b">Third</string>
     <string name="question_two_c">Fourth</string>
