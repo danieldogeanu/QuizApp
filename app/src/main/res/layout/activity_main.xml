@@ -385,12 +385,12 @@
 
             <Button
                 android:id="@+id/results_btn"
-                android:text="Results"
+                android:text="@string/results_btn"
                 style="@style/ResultsButton" />
 
             <Button
                 android:id="@+id/reset_btn"
-                android:text="Reset"
+                android:text="@string/reset_btn"
                 style="@style/ResetButton" />
 
         </LinearLayout>
