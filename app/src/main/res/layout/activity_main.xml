@@ -381,30 +381,17 @@
 
         <LinearLayout
             android:id="@+id/button_pack"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:orientation="horizontal" >
+            style="@style/ButtonPack" >
 
             <Button
                 android:id="@+id/results_btn"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="2"
-                android:layout_marginRight="4dp"
-                android:background="@drawable/main_button_bg"
                 android:text="Results"
-                android:textColor="@color/secondaryTextColor" />
+                style="@style/ResultsButton" />
 
             <Button
                 android:id="@+id/reset_btn"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:layout_marginLeft="4dp"
-                android:background="@drawable/secondary_button_bg"
                 android:text="Reset"
-                android:textColor="@color/secondaryTextColor" />
+                style="@style/ResetButton" />
 
         </LinearLayout>
 
