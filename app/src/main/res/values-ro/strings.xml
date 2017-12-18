@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">QuizApp</string>
+    <string name="app_title">Quiz Marte</string>
+    <string name="question_one">Care este cel mai înalt munte de pe Marte?</string>
+    <string name="question_two">Marte este a _ planetă de la Soare.</string>
+    <string name="question_two_a">Doua</string>
+    <string name="question_two_b">Treia</string>
+    <string name="question_two_c">Patra</string>
+    <string name="question_three">Cați sateliți naturali are Marte?</string>
+    <string name="question_three_a">Doi</string>
+    <string name="question_three_b">Șase</string>
+    <string name="question_three_c">Trei</string>
+    <string name="question_four">Care este numele sateliților naturali ai lui Marte?</string>
+    <string name="question_five">Cât durează un an Marțian?</string>
+    <string name="question_five_a">4 ani Pământeni</string>
+    <string name="question_five_b">2 ani Pământeni</string>
+    <string name="question_five_c">1 an Pământean</string>
+    <string name="question_six">Care este temperatura pe Marte?</string>
+    <string name="question_seven">Ce gaze sunt prezente în atmosfera planetei Marte?</string>
+    <string name="question_seven_a">Hidrogen</string>
+    <string name="question_seven_b">Dioxid de Carbon</string>
+    <string name="question_seven_c">Oxigen</string>
+    <string name="question_seven_d">Azot</string>
+    <string name="question_seven_e">Argon</string>
+    <string name="results_btn">Arată Rezultate</string>
+    <string name="reset_btn">Resetează</string>
+    <string name="score_title">Scorul Tău</string>
+</resources>
