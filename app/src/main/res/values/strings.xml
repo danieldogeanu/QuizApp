@@ -41,6 +41,8 @@
     <string name="question_seven_e">Argon</string>
 
     <string name="score_title">Your Score</string>
+    <string name="score_points">Points</string>
+
     <string name="results_btn">Show Results</string>
     <string name="reset_btn">Reset</string>
 

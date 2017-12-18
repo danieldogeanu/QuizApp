@@ -26,4 +26,5 @@
     <string name="results_btn">Arată Rezultate</string>
     <string name="reset_btn">Resetează</string>
     <string name="score_title">Scorul Tău</string>
+    <string name="score_points">Puncte</string>
 </resources>
