@@ -12,38 +12,20 @@
         android:padding="16dp">
 
         <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="250dp"
-            android:layout_marginBottom="8dp">
+            style="@style/HeaderCard" >
 
             <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_alignParentBottom="true"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:scaleType="fitCenter"
-                android:src="@drawable/rover" />
+                android:src="@drawable/rover"
+                style="@style/HeaderImage" />
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentTop="true"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="24dp"
                 android:text="@string/app_title"
-                android:textSize="28sp" />
+                style="@style/HeaderTitle" />
 
             <TextView
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:layout_alignParentBottom="true"
-                android:layout_centerHorizontal="true"
-                android:layout_marginBottom="16dp"
-                android:background="@drawable/progress_bg"
-                android:gravity="center"
-                android:text="4/7"
-                android:textSize="20sp" />
+                android:id="@+id/display_progress"
+                android:text="0/7"
+                style="@style/HeaderProgress" />
 
         </RelativeLayout>
 
