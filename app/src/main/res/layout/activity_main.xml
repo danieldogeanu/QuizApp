@@ -384,7 +384,7 @@
             style="@style/ScoreCard" >
 
             <TextView
-                android:text="Your Score"
+                android:text="@string/score_title"
                 style="@style/ScoreTitle" />
 
             <TextView

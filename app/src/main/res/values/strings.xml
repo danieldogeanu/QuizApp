@@ -40,7 +40,8 @@
     <string name="question_seven_d">Nitrogen</string>
     <string name="question_seven_e">Argon</string>
 
-    <string name="results_btn">Results</string>
+    <string name="score_title">Your Score</string>
+    <string name="results_btn">Show Results</string>
     <string name="reset_btn">Reset</string>
 
 
