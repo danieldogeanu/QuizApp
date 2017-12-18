@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="app_name" translatable="false">QuizApp</string>
     <string name="app_title">Mars Quiz</string>
 
@@ -46,5 +46,7 @@
     <string name="results_btn">Show Results</string>
     <string name="reset_btn">Reset</string>
 
+    <string name="progress_text"><xliff:g id="progress">%1$s</xliff:g>/7</string>
+    <string name="score_text"><xliff:g id="score">%1$s</xliff:g>/10</string>
 
 </resources>

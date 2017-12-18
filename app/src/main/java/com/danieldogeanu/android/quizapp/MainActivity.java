@@ -19,6 +19,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        // Temporary Display Score Keeping Variables
+        displayProgress(questionsAnswered);
+        displayScore(totalPoints);
     }
 
     /**
@@ -28,7 +32,8 @@ public class MainActivity extends AppCompatActivity {
      */
     private void displayProgress(int progress) {
         TextView progressTextView = (TextView) findViewById(R.id.display_progress);
-        progressTextView.setText("" + progress);
+        String progressText = getString(R.string.progress_text, Integer.toString(progress));
+        progressTextView.setText(progressText);
     }
 
     /**
@@ -38,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
      */
     private void displayScore(int score) {
         TextView scoreTextView = (TextView) findViewById(R.id.display_score);
-        scoreTextView.setText("" + score);
+        String scoreText = getString(R.string.score_text, Integer.toString(score));
+        scoreTextView.setText(scoreText);
     }
 }
