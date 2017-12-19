@@ -52,4 +52,37 @@ public class MainActivity extends AppCompatActivity {
     private void showToast(CharSequence message) {
         Toast.makeText(getApplicationContext(), message, Toast.LENGTH_SHORT).show();
     }
+
+    /**
+     * Increment the number of answered questions.
+     * @return - Incremented questionsAnswered.
+     */
+    private int incrementQuestions() {
+        if (questionsAnswered < 7) {
+            questionsAnswered++;
+        }
+        showToast(getString(R.string.questions_toast));
+        return questionsAnswered;
+    }
+
+    /**
+     * Decrement the number of answered questions.
+     * @return - Decremented questionsAnswered.
+     */
+    private int decrementQuestions() {
+        if (questionsAnswered != 0) {
+            questionsAnswered--;
+        }
+        showToast(getString(R.string.questions_toast));
+        return questionsAnswered;
+    }
+
+    /**
+     * Reset the number of answered questions.
+     * @return - Reset questionsAnswered.
+     */
+    private int resetQuestions() {
+        questionsAnswered = 0;
+        return questionsAnswered;
+    }
 }

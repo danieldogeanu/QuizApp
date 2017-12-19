@@ -29,4 +29,5 @@
     <string name="score_points">Puncte</string>
     <string name="progress_text"><xliff:g id="progress">%1$s</xliff:g>/7</string>
     <string name="score_text"><xliff:g id="score">%1$s</xliff:g>/10</string>
+    <string name="questions_toast"><xliff:g id="questions">%1$s</xliff:g>/7 Întrebări Completate</string>
 </resources>
