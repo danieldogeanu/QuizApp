@@ -7,13 +7,8 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    /**
-     * Score Keeping Variables:
-     * int questionsAnswered - Keeps track of the number of questions answered. (0/7)
-     * int totalPoints - Keeps track of the points scored for answered questions. Some questions may have more than one point. (0/10)
-     */
-    int questionsAnswered = 0;
-    int totalPoints = 0;
+    int questionsAnswered = 0; // Keeps track of the number of questions answered. (0/7)
+    int totalPoints = 0; // Keeps track of the points scored for answered questions. Some questions may have more than one point. (0/10)
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
