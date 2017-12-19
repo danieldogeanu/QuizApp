@@ -85,4 +85,37 @@ public class MainActivity extends AppCompatActivity {
         questionsAnswered = 0;
         return questionsAnswered;
     }
+
+    /**
+     * Add points to the total score.
+     * @param points - Number of points to add.
+     * @return - Incremented totalPoints variable.
+     */
+    private int addPoints(int points) {
+        if (totalPoints < 10) {
+            totalPoints += points;
+        }
+        return totalPoints;
+    }
+
+    /**
+     * Subtract points from the total score.
+     * @param points - Number of points to subtract.
+     * @return - Decremented totalPoints variable.
+     */
+    private int subtractPoints(int points) {
+        if ((totalPoints != 0) && (totalPoints >= points)) {
+            totalPoints -= points;
+        }
+        return totalPoints;
+    }
+
+    /**
+     * Reset the number of points.
+     * @return - Reset totalPoints.
+     */
+    private int resetPoints() {
+        totalPoints = 0;
+        return totalPoints;
+    }
 }
