@@ -209,6 +209,20 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
+     * Clears all CheckBoxes for all questions.
+     */
+    private void clearCheckAnswers() {
+        for (int checkID : allCheckBoxes) {
+            CheckBox thisCheckBox = (CheckBox) findViewById(checkID);
+            boolean isAnswered = thisCheckBox.isChecked();
+
+            if (isAnswered) {
+                thisCheckBox.setChecked(false);
+            }
+        }
+    }
+
+    /**
      * Show the results of the quiz, based on the answers provided.
      * This method is called when the Show Results button is clicked.
      */
@@ -229,6 +243,7 @@ public class MainActivity extends AppCompatActivity {
         resetQuestions();
         resetPoints();
         clearRadioAnswers();
+        clearCheckAnswers();
         displayProgress(questionsAnswered);
         displayScore(totalPoints);
         wasScoreDisplayed = false;
