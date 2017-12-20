@@ -394,7 +394,8 @@
             <Button
                 android:id="@+id/reset_btn"
                 style="@style/ResetButton"
-                android:text="@string/reset_btn" />
+                android:text="@string/reset_btn"
+                android:onClick="resetResults" />
 
         </LinearLayout>
 

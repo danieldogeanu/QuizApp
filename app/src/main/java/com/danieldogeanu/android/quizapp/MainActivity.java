@@ -129,4 +129,15 @@ public class MainActivity extends AppCompatActivity {
             displayScore(totalPoints);
         }
     }
+
+    /**
+     * Reset the results and progress of the entire quiz.
+     * This method is called when the Reset button is clicked.
+     */
+    public void resetResults(View view) {
+        resetQuestions();
+        resetPoints();
+        displayProgress(questionsAnswered);
+        displayScore(totalPoints);
+    }
 }
