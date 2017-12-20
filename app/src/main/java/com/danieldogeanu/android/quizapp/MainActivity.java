@@ -14,9 +14,11 @@ public class MainActivity extends AppCompatActivity {
      * Score Variables:
      * questionsAnswered - (int) Keeps track of the number of questions answered. (0/7)
      * totalPoints - (int) Keeps track of the points scored for answered questions. Some questions may have more than one point. (0/10)
+     * wasScoreDisplayed - (boolean) Shows if the result (score) was already displayed, in order to prevent re-adding points to totalPoints variable.
      */
     private int questionsAnswered = 0;
     private int totalPoints = 0;
+    private boolean wasScoreDisplayed = false;
 
     /**
      * ID Arrays for all Radio Groups and Checkboxes.
@@ -201,9 +203,12 @@ public class MainActivity extends AppCompatActivity {
      * This method is called when the Show Results button is clicked.
      */
     public void showResults(View view) {
-        getRadioAnswers();
-        getCheckAnswers();
-        displayScore(totalPoints);
+        if (!wasScoreDisplayed) {
+            getRadioAnswers();
+            getCheckAnswers();
+            displayScore(totalPoints);
+            wasScoreDisplayed = true;
+        }
     }
 
     /**
@@ -215,5 +220,6 @@ public class MainActivity extends AppCompatActivity {
         resetPoints();
         displayProgress(questionsAnswered);
         displayScore(totalPoints);
+        wasScoreDisplayed = false;
     }
 }
