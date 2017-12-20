@@ -3,6 +3,7 @@ package com.danieldogeanu.android.quizapp;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.CheckBox;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -179,11 +180,29 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
+     * Get all the answers from all the CheckBoxes and check to see if they're correct.
+     * If they are correct, add one point for each correct answer.
+     */
+    private void getCheckAnswers() {
+        for (int checkID : allCheckBoxes) {
+            CheckBox thisCheckBox = (CheckBox) findViewById(checkID);
+            boolean isAnswered = thisCheckBox.isChecked();
+
+            for (int correctAnswer : correctCheckAnswers) {
+                if (isAnswered && checkID == correctAnswer ) {
+                    addPoints(1);
+                }
+            }
+        }
+    }
+
+    /**
      * Show the results of the quiz, based on the answers provided.
      * This method is called when the Show Results button is clicked.
      */
     public void showResults(View view) {
         getRadioAnswers();
+        getCheckAnswers();
         displayScore(totalPoints);
     }
 
