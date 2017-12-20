@@ -65,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // Temporary Display Score Keeping Variables
+        // Display the initial values for the Score Keeping Variables
         displayProgress(questionsAnswered);
         displayScore(totalPoints);
     }
