@@ -162,17 +162,29 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
+     * Get all the answers from all the RadioGroups and check to see if they're correct.
+     * If they are correct, add one point for each correct answer.
+     */
+    private void getRadioAnswers() {
+        for (int groupID : allRadioGroups) {
+            RadioGroup thisRadioGroup = (RadioGroup) findViewById(groupID);
+            int selectedAnswer = thisRadioGroup.getCheckedRadioButtonId();
+
+            for (int correctAnswer : correctRadioAnswers) {
+                if (selectedAnswer == correctAnswer) {
+                    addPoints(1);
+                }
+            }
+        }
+    }
+
+    /**
      * Show the results of the quiz, based on the answers provided.
      * This method is called when the Show Results button is clicked.
      */
     public void showResults(View view) {
-        RadioGroup radioGroupOne = (RadioGroup) findViewById(R.id.radio_group_one);
-        int selectedAnswer = radioGroupOne.getCheckedRadioButtonId();
-
-        if (selectedAnswer == R.id.radio_one_c) {
-            addPoints(1);
-            displayScore(totalPoints);
-        }
+        getRadioAnswers();
+        displayScore(totalPoints);
     }
 
     /**
