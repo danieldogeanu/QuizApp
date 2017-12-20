@@ -2,6 +2,8 @@ package com.danieldogeanu.android.quizapp;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -112,5 +114,19 @@ public class MainActivity extends AppCompatActivity {
     private int resetPoints() {
         totalPoints = 0;
         return totalPoints;
+    }
+
+    /**
+     * Show the results of the quiz, based on the answers provided.
+     * This method is called when the Show Results button is clicked.
+     */
+    public void showResults(View view) {
+        RadioGroup radioGroupOne = (RadioGroup) findViewById(R.id.radio_group_one);
+        int selectedAnswer = radioGroupOne.getCheckedRadioButtonId();
+
+        if (selectedAnswer == R.id.radio_one_c) {
+            addPoints(1);
+            displayScore(totalPoints);
+        }
     }
 }

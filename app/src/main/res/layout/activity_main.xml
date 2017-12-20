@@ -388,7 +388,8 @@
             <Button
                 android:id="@+id/results_btn"
                 style="@style/ResultsButton"
-                android:text="@string/results_btn" />
+                android:text="@string/results_btn"
+                android:onClick="showResults" />
 
             <Button
                 android:id="@+id/reset_btn"
