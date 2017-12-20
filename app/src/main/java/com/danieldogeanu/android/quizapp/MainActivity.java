@@ -191,10 +191,20 @@ public class MainActivity extends AppCompatActivity {
             boolean isAnswered = thisCheckBox.isChecked();
 
             for (int correctAnswer : correctCheckAnswers) {
-                if (isAnswered && checkID == correctAnswer ) {
+                if (isAnswered && checkID == correctAnswer) {
                     addPoints(1);
                 }
             }
+        }
+    }
+
+    /**
+     * Clears all RadioButtons from all RadioGroups.
+     */
+    private void clearRadioAnswers() {
+        for (int groupID : allRadioGroups) {
+            RadioGroup thisRadioGroup = (RadioGroup) findViewById(groupID);
+            thisRadioGroup.clearCheck();
         }
     }
 
@@ -218,6 +228,7 @@ public class MainActivity extends AppCompatActivity {
     public void resetResults(View view) {
         resetQuestions();
         resetPoints();
+        clearRadioAnswers();
         displayProgress(questionsAnswered);
         displayScore(totalPoints);
         wasScoreDisplayed = false;
