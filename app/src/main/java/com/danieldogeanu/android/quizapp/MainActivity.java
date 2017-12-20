@@ -17,6 +17,46 @@ public class MainActivity extends AppCompatActivity {
     private int questionsAnswered = 0;
     private int totalPoints = 0;
 
+    /**
+     * ID Arrays for all Radio Groups and Checkboxes.
+     * allRadioGroups - (int[]) ID array for all radio groups.
+     * correctRadioAnswers - (int[]) ID array with all the correct answers for the radio groups.
+     * allCheckBoxes - (int[]) ID array with all the checkboxes.
+     * correctCheckAnswers - (int[]) ID array with all the correct answers for checkboxes.
+     */
+    private int[] allRadioGroups = {
+            R.id.radio_group_one,
+            R.id.radio_group_two,
+            R.id.radio_group_three,
+            R.id.radio_group_five,
+            R.id.radio_group_six
+    };
+    private int[] correctRadioAnswers = {
+            R.id.radio_one_c,
+            R.id.radio_two_c,
+            R.id.radio_three_a,
+            R.id.radio_five_b,
+            R.id.radio_six_c
+    };
+    private int[] allCheckBoxes = {
+            R.id.check_four_a,
+            R.id.check_four_b,
+            R.id.check_four_c,
+            R.id.check_four_d,
+            R.id.check_seven_a,
+            R.id.check_seven_b,
+            R.id.check_seven_c,
+            R.id.check_seven_d,
+            R.id.check_seven_e
+    };
+    private int[] correctCheckAnswers = {
+            R.id.check_four_a,
+            R.id.check_four_c,
+            R.id.check_seven_b,
+            R.id.check_seven_d,
+            R.id.check_seven_e
+    };
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
