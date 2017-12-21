@@ -1,5 +1,6 @@
 package com.danieldogeanu.android.quizapp;
 
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -88,6 +89,32 @@ public class MainActivity extends AppCompatActivity {
         TextView scoreTextView = (TextView) findViewById(R.id.display_score);
         String scoreText = getString(R.string.score_text, Integer.toString(score));
         scoreTextView.setText(scoreText);
+    }
+
+    /**
+     * Change the color of the Score text based on totalScore variable.
+     * @param score - Total points scored by the user.
+     */
+    private void changeScoreColor(int score) {
+        TextView scoreTextView = (TextView) findViewById(R.id.display_score);
+
+        if (score == 10) {
+            scoreTextView.setTextColor(Color.parseColor("#009924")); // Green
+        } else if ((score >= 7) && (score <= 9)) {
+            scoreTextView.setTextColor(Color.parseColor("#5ff802")); // Light Green
+        } else if ((score >= 3) && (score <= 6)) {
+            scoreTextView.setTextColor(Color.parseColor("#f8aa02")); // Orange
+        } else {
+            scoreTextView.setTextColor(Color.parseColor("#f81302")); // Red
+        }
+    }
+
+    /**
+     * Reset the color of the Score text to the default one.
+     */
+    private void resetScoreColor() {
+        TextView scoreTextView = (TextView) findViewById(R.id.display_score);
+        scoreTextView.setTextColor(Color.parseColor("#dedede"));
     }
 
     /**
@@ -231,6 +258,7 @@ public class MainActivity extends AppCompatActivity {
             getRadioAnswers();
             getCheckAnswers();
             displayScore(totalPoints);
+            changeScoreColor(totalPoints);
             wasScoreDisplayed = true;
         }
     }
@@ -246,6 +274,9 @@ public class MainActivity extends AppCompatActivity {
         clearCheckAnswers();
         displayProgress(questionsAnswered);
         displayScore(totalPoints);
+        resetScoreColor();
         wasScoreDisplayed = false;
     }
+
+    // TODO: Add methods to display the number of answered questions as they are answered.
 }
