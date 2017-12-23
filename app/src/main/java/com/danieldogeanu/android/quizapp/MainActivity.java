@@ -1,8 +1,8 @@
 package com.danieldogeanu.android.quizapp;
 
 import android.graphics.Color;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.RadioGroup;
@@ -69,6 +69,9 @@ public class MainActivity extends AppCompatActivity {
         // Display the initial values for the Score Keeping Variables
         displayProgress(questionsAnswered);
         displayScore(totalPoints);
+
+        // Attach Click Listeners for all RadioGroups
+        setRadioListeners();
     }
 
     /**
@@ -222,6 +225,28 @@ public class MainActivity extends AppCompatActivity {
                     addPoints(1);
                 }
             }
+        }
+    }
+
+    /**
+     * Set on checked changed listeners for all the RadioGroups, so that when a question is answered, the progress number is incremented.
+     */
+    protected void setRadioListeners() {
+        for (int groupID : allRadioGroups) {
+            RadioGroup thisRadioGroup = (RadioGroup) findViewById(groupID);
+
+            thisRadioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+                int hasQuestionBeenAnswered = 0;
+
+                @Override
+                public void onCheckedChanged(RadioGroup group, int checkedId) {
+                    if ((checkedId != -1) && (hasQuestionBeenAnswered < 1)) {
+                        incrementQuestions();
+                        displayProgress(questionsAnswered);
+                        hasQuestionBeenAnswered++;
+                    }
+                }
+            });
         }
     }
 
