@@ -75,8 +75,8 @@ public class MainActivity extends AppCompatActivity {
         displayProgress(questionsAnswered);
         displayScore(totalPoints);
 
-        // Attach Click Listeners for all RadioGroups
-        setRadioListeners();
+        setRadioListeners(); // Attach Click Listeners for all RadioGroups
+        setCheckListeners(); // Attach Click Listeners for all CheckBoxes
     }
 
     /**
@@ -249,6 +249,46 @@ public class MainActivity extends AppCompatActivity {
                         incrementQuestions();
                         displayProgress(questionsAnswered);
                         hasQuestionBeenAnswered++;
+                    }
+                }
+            });
+        }
+    }
+
+    /**
+     * State Variables for setCheckListeners() Method
+     */
+    private int checkGroupFourAnswered = 0;
+    private int checkGroupSevenAnswered = 0;
+
+    /**
+     * Set on click listeners for all the CheckBoxes, so that when a question is answered, the progress number is incremented.
+     */
+    protected void setCheckListeners() {
+        for (int checkID : allCheckBoxes) {
+            CheckBox thisCheckBox = (CheckBox) findViewById(checkID);
+
+            thisCheckBox.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    View thisParent = (View) v.getParent();
+                    int thisParentID = thisParent.getId();
+
+                    switch (thisParentID) {
+                        case R.id.check_group_four:
+                            if (checkGroupFourAnswered < 1) {
+                                incrementQuestions();
+                                displayProgress(questionsAnswered);
+                                checkGroupFourAnswered++;
+                            }
+                            break;
+                        case R.id.check_group_seven:
+                            if (checkGroupSevenAnswered < 1) {
+                                incrementQuestions();
+                                displayProgress(questionsAnswered);
+                                checkGroupSevenAnswered++;
+                            }
+                            break;
                     }
                 }
             });
