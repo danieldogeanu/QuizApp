@@ -12,22 +12,23 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
 
     /**
-     * Score Variables:
-     * questionsAnswered - (int) Keeps track of the number of questions answered. (0/7)
-     * totalPoints - (int) Keeps track of the points scored for answered questions. Some questions may have more than one point. (0/10)
-     * wasScoreDisplayed - (boolean) Shows if the result (score) was already displayed, in order to prevent re-adding points to totalPoints variable.
+     * Keep track of the number of questions answered. (max 7 questions)
      */
     private int questionsAnswered = 0;
-    private int totalPoints = 0;
-    private boolean wasScoreDisplayed = false;
 
     /**
-     * ID Arrays for all Radio Groups and Checkboxes.
-     * allRadioGroups - (int[]) ID array for all radio groups.
-     * correctRadioAnswers - (int[]) ID array with all the correct answers for the radio groups.
-     * allCheckGroups - (int[]) ID array with all the parent views for checkboxes.
-     * allCheckBoxes - (int[]) ID array with all the checkboxes.
-     * correctCheckAnswers - (int[]) ID array with all the correct answers for checkboxes.
+     * Keep track of the points scored for answered questions. Some questions may have more than one point. (max 10 ponts)
+     */
+    private int totalPoints = 0;
+
+    /**
+     * Show if the result (score) was already displayed, in order to prevent readding points.
+     */
+    private boolean wasScoreDisplayed = false;
+
+
+    /**
+     * ID Array for all RadioGroups.
      */
     private int[] allRadioGroups = {
             R.id.radio_group_one,
@@ -36,6 +37,10 @@ public class MainActivity extends AppCompatActivity {
             R.id.radio_group_five,
             R.id.radio_group_six
     };
+
+    /**
+     * ID Array with all the correct answers for the RadioGroups.
+     */
     private int[] correctRadioAnswers = {
             R.id.radio_one_c,
             R.id.radio_two_c,
@@ -43,6 +48,10 @@ public class MainActivity extends AppCompatActivity {
             R.id.radio_five_b,
             R.id.radio_six_c
     };
+
+    /**
+     * ID Array with all the CheckBoxes.
+     */
     private int[] allCheckBoxes = {
             R.id.check_four_a,
             R.id.check_four_b,
@@ -54,6 +63,10 @@ public class MainActivity extends AppCompatActivity {
             R.id.check_seven_d,
             R.id.check_seven_e
     };
+
+    /**
+     * ID Array with all the correct answers for CheckBoxes.
+     */
     private int[] correctCheckAnswers = {
             R.id.check_four_a,
             R.id.check_four_c,
@@ -71,13 +84,14 @@ public class MainActivity extends AppCompatActivity {
         displayProgress(questionsAnswered);
         displayScore(totalPoints);
 
-        setRadioListeners(); // Attach Click Listeners for all RadioGroups
-        setCheckListeners(); // Attach Click Listeners for all CheckBoxes
+        // Attach Click Listeners for all RadioGroups and Checkboxes
+        setRadioListeners();
+        setCheckListeners();
     }
 
     /**
      * This method displays the number of answered questions (progress), regardless if the question's answer is right or wrong.
-     * @param progress - Number of questions answered.
+     * @param progress Number of questions answered.
      */
     private void displayProgress(int progress) {
         TextView progressTextView = (TextView) findViewById(R.id.display_progress);
@@ -87,7 +101,7 @@ public class MainActivity extends AppCompatActivity {
 
     /**
      * This method displays how many points the user has scored during the quiz. Wrong answers are not added to the score.
-     * @param score - Points scored by the user.
+     * @param score Points scored by the user.
      */
     private void displayScore(int score) {
         TextView scoreTextView = (TextView) findViewById(R.id.display_score);
@@ -97,7 +111,7 @@ public class MainActivity extends AppCompatActivity {
 
     /**
      * Change the color of the Score text based on totalScore variable.
-     * @param score - Total points scored by the user.
+     * @param score Total points scored by the user.
      */
     private void changeScoreColor(int score) {
         TextView scoreTextView = (TextView) findViewById(R.id.display_score);
@@ -123,7 +137,7 @@ public class MainActivity extends AppCompatActivity {
 
     /**
      * Display a short toast message in case of error or action that needs to show feedback to the user.
-     * @param message - The message to display (needs to be short and concise).
+     * @param message The message to display (needs to be short and concise).
      */
     private void showToast(CharSequence message) {
         Toast.makeText(getApplicationContext(), message, Toast.LENGTH_SHORT).show();
@@ -131,7 +145,6 @@ public class MainActivity extends AppCompatActivity {
 
     /**
      * Increment the number of answered questions.
-     * @return - Incremented questionsAnswered.
      */
     private void incrementQuestions() {
         if (questionsAnswered < 7) {
@@ -143,32 +156,26 @@ public class MainActivity extends AppCompatActivity {
 
     /**
      * Reset the number of answered questions.
-     * @return - Reset questionsAnswered.
      */
-    private int resetQuestions() {
+    private void resetQuestions() {
         questionsAnswered = 0;
-        return questionsAnswered;
     }
 
     /**
      * Add points to the total score.
-     * @param points - Number of points to add.
-     * @return - Incremented totalPoints variable.
+     * @param points Number of points to add.
      */
-    private int addPoints(int points) {
+    private void addPoints(int points) {
         if (totalPoints < 10) {
             totalPoints += points;
         }
-        return totalPoints;
     }
 
     /**
      * Reset the number of points.
-     * @return - Reset totalPoints.
      */
-    private int resetPoints() {
+    private void resetPoints() {
         totalPoints = 0;
-        return totalPoints;
     }
 
     /**
@@ -228,9 +235,13 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * State variables for setCheckListeners() method.
+     * State variable for setCheckListeners() method.
      */
     private int checkGroupFourAnswered = 0;
+
+    /**
+     * State variable for setCheckListeners() method.
+     */
     private int checkGroupSevenAnswered = 0;
 
     /**
