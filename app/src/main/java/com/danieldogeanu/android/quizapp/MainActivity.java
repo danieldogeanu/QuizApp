@@ -25,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
      * ID Arrays for all Radio Groups and Checkboxes.
      * allRadioGroups - (int[]) ID array for all radio groups.
      * correctRadioAnswers - (int[]) ID array with all the correct answers for the radio groups.
+     * allCheckGroups - (int[]) ID array with all the parent views for checkboxes.
      * allCheckBoxes - (int[]) ID array with all the checkboxes.
      * correctCheckAnswers - (int[]) ID array with all the correct answers for checkboxes.
      */
@@ -41,6 +42,10 @@ public class MainActivity extends AppCompatActivity {
             R.id.radio_three_a,
             R.id.radio_five_b,
             R.id.radio_six_c
+    };
+    private int[] allCheckGroups = {
+            R.id.check_group_four,
+            R.id.check_group_seven
     };
     private int[] allCheckBoxes = {
             R.id.check_four_a,
@@ -302,6 +307,4 @@ public class MainActivity extends AppCompatActivity {
         resetScoreColor();
         wasScoreDisplayed = false;
     }
-
-    // TODO: Add methods to display the number of answered questions as they are answered.
 }
