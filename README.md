@@ -5,6 +5,8 @@ This is just a practice app for [Google Developer Challenge Scholarship: Android
 ![QuizApp Screenshot Screen Start](https://raw.githubusercontent.com/danieldogeanu/QuizApp/master/screenshots/quiz_app_start.jpg)
 ![QuizApp Screenshot Screen End](https://raw.githubusercontent.com/danieldogeanu/QuizApp/master/screenshots/quiz_app_end.jpg)
 
+#### [Video Demo Here](https://youtu.be/bdBP51BY538)
+
 ### Working Files Are:
 * [MainActivity.java](https://github.com/danieldogeanu/QuizApp/blob/master/app/src/main/java/com/danieldogeanu/android/quizapp/MainActivity.java)
 * [activity_main.xml](https://github.com/danieldogeanu/QuizApp/blob/master/app/src/main/res/layout/activity_main.xml)
