@@ -43,10 +43,6 @@ public class MainActivity extends AppCompatActivity {
             R.id.radio_five_b,
             R.id.radio_six_c
     };
-    private int[] allCheckGroups = {
-            R.id.check_group_four,
-            R.id.check_group_seven
-    };
     private int[] allCheckBoxes = {
             R.id.check_four_a,
             R.id.check_four_b,
@@ -146,18 +142,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * Decrement the number of answered questions.
-     * @return - Decremented questionsAnswered.
-     */
-    private void decrementQuestions() {
-        if (questionsAnswered != 0) {
-            questionsAnswered--;
-        }
-        String questions = Integer.toString(questionsAnswered);
-        showToast(getString(R.string.questions_toast, questions));
-    }
-
-    /**
      * Reset the number of answered questions.
      * @return - Reset questionsAnswered.
      */
@@ -174,18 +158,6 @@ public class MainActivity extends AppCompatActivity {
     private int addPoints(int points) {
         if (totalPoints < 10) {
             totalPoints += points;
-        }
-        return totalPoints;
-    }
-
-    /**
-     * Subtract points from the total score.
-     * @param points - Number of points to subtract.
-     * @return - Decremented totalPoints variable.
-     */
-    private int subtractPoints(int points) {
-        if ((totalPoints != 0) && (totalPoints >= points)) {
-            totalPoints -= points;
         }
         return totalPoints;
     }
