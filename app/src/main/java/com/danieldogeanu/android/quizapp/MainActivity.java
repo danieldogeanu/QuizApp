@@ -241,14 +241,14 @@ public class MainActivity extends AppCompatActivity {
             RadioGroup thisRadioGroup = (RadioGroup) findViewById(groupID);
 
             thisRadioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-                int hasQuestionBeenAnswered = 0;
+                int wasAnswered = 0;
 
                 @Override
                 public void onCheckedChanged(RadioGroup group, int checkedId) {
-                    if ((checkedId != -1) && (hasQuestionBeenAnswered < 1)) {
+                    if ((checkedId != -1) && (wasAnswered < 1)) {
                         incrementQuestions();
                         displayProgress(questionsAnswered);
-                        hasQuestionBeenAnswered++;
+                        wasAnswered++;
                     }
                 }
             });
@@ -256,7 +256,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * State Variables for setCheckListeners() Method
+     * State variables for setCheckListeners() method.
      */
     private int checkGroupFourAnswered = 0;
     private int checkGroupSevenAnswered = 0;
@@ -293,6 +293,14 @@ public class MainActivity extends AppCompatActivity {
                 }
             });
         }
+    }
+
+    /**
+     * Reset the state variables for setCheckListeners() method.
+     */
+    private void resetCheckAnswers() {
+        checkGroupFourAnswered = 0;
+        checkGroupSevenAnswered = 0;
     }
 
     /**
@@ -345,6 +353,8 @@ public class MainActivity extends AppCompatActivity {
         displayProgress(questionsAnswered);
         displayScore(totalPoints);
         resetScoreColor();
+        setRadioListeners();
+        resetCheckAnswers();
         wasScoreDisplayed = false;
     }
 }
