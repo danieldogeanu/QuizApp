@@ -132,24 +132,24 @@ public class MainActivity extends AppCompatActivity {
      * Increment the number of answered questions.
      * @return - Incremented questionsAnswered.
      */
-    private int incrementQuestions() {
+    private void incrementQuestions() {
         if (questionsAnswered < 7) {
             questionsAnswered++;
         }
-        showToast(getString(R.string.questions_toast));
-        return questionsAnswered;
+        String questions = Integer.toString(questionsAnswered);
+        showToast(getString(R.string.questions_toast, questions));
     }
 
     /**
      * Decrement the number of answered questions.
      * @return - Decremented questionsAnswered.
      */
-    private int decrementQuestions() {
+    private void decrementQuestions() {
         if (questionsAnswered != 0) {
             questionsAnswered--;
         }
-        showToast(getString(R.string.questions_toast));
-        return questionsAnswered;
+        String questions = Integer.toString(questionsAnswered);
+        showToast(getString(R.string.questions_toast, questions));
     }
 
     /**
