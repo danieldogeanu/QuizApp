@@ -106,13 +106,13 @@ public class MainActivity extends AppCompatActivity {
         TextView scoreTextView = (TextView) findViewById(R.id.display_score);
 
         if (score == 10) {
-            scoreTextView.setTextColor(Color.parseColor("#009924")); // Green
+            scoreTextView.setTextColor(getResources().getColor(R.color.colorGreen));
         } else if ((score >= 7) && (score <= 9)) {
-            scoreTextView.setTextColor(Color.parseColor("#5ff802")); // Light Green
+            scoreTextView.setTextColor(getResources().getColor(R.color.colorLightGreen));
         } else if ((score >= 3) && (score <= 6)) {
-            scoreTextView.setTextColor(Color.parseColor("#f8aa02")); // Orange
+            scoreTextView.setTextColor(getResources().getColor(R.color.colorOrange));
         } else {
-            scoreTextView.setTextColor(Color.parseColor("#f81302")); // Red
+            scoreTextView.setTextColor(getResources().getColor(R.color.colorRed));
         }
     }
 
