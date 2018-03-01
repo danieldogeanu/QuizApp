@@ -5,14 +5,9 @@
     android:layout_height="match_parent"
     tools:context="com.danieldogeanu.android.quizapp.MainActivity">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="16dp">
+    <LinearLayout style="@style/MainContainer">
 
-        <RelativeLayout
-            style="@style/HeaderCard" >
+        <RelativeLayout style="@style/HeaderCard">
 
             <ImageView
                 android:src="@drawable/rover"
