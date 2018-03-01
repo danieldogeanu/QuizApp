@@ -123,7 +123,7 @@ public class MainActivity extends AppCompatActivity {
     /** Reset the color of the Score text to the default one. */
     private void resetScoreColor() {
         TextView scoreTextView = (TextView) findViewById(R.id.display_score);
-        scoreTextView.setTextColor(Color.parseColor("#dedede"));
+        scoreTextView.setTextColor(getResources().getColor(R.color.cardBackground));
     }
 
     /**
