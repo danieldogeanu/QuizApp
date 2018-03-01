@@ -25,6 +25,10 @@
 
         </RelativeLayout>
 
+        <EditText
+            android:id="@+id/name_field"
+            style="@style/NameField" />
+
         <RelativeLayout
             android:id="@+id/quiz_card_one"
             style="@style/QuizCard">

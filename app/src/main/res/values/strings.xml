@@ -4,6 +4,8 @@
 
     <string name="mars_rover_description">Mars Rover</string>
 
+    <string name="user_name_hint">Your Name</string>
+
     <string name="question_one_index">1</string>
     <string name="question_one">What\'s the highest mountain on Mars?</string>
     <string name="question_one_a" translatable="false">Mauna Kea</string>
