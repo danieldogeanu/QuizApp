@@ -37,6 +37,7 @@
                 android:id="@+id/question_one"
                 style="@style/QuizQuestion"
                 android:layout_toRightOf="@id/quiz_icon_one"
+                android:layout_toEndOf="@id/quiz_icon_one"
                 android:text="@string/question_one" />
 
             <View
@@ -48,7 +49,8 @@
                 android:id="@+id/radio_group_one"
                 style="@style/QuizRadioGroup"
                 android:layout_below="@id/divider_one"
-                android:layout_toRightOf="@id/quiz_icon_one">
+                android:layout_toRightOf="@id/quiz_icon_one"
+                android:layout_toEndOf="@id/quiz_icon_one">
 
                 <RadioButton
                     android:id="@+id/radio_one_a"
@@ -82,6 +84,7 @@
                 android:id="@+id/question_two"
                 style="@style/QuizQuestion"
                 android:layout_toRightOf="@id/quiz_icon_two"
+                android:layout_toEndOf="@id/quiz_icon_two"
                 android:text="@string/question_two" />
 
             <View
@@ -93,7 +96,8 @@
                 android:id="@+id/radio_group_two"
                 style="@style/QuizRadioGroup"
                 android:layout_below="@id/divider_two"
-                android:layout_toRightOf="@id/quiz_icon_two">
+                android:layout_toRightOf="@id/quiz_icon_two"
+                android:layout_toEndOf="@id/quiz_icon_two">
 
                 <RadioButton
                     android:id="@+id/radio_two_a"
@@ -127,6 +131,7 @@
                 android:id="@+id/question_three"
                 style="@style/QuizQuestion"
                 android:layout_toRightOf="@id/quiz_icon_three"
+                android:layout_toEndOf="@id/quiz_icon_three"
                 android:text="@string/question_three" />
 
             <View
@@ -138,7 +143,8 @@
                 android:id="@+id/radio_group_three"
                 style="@style/QuizRadioGroup"
                 android:layout_below="@id/divider_three"
-                android:layout_toRightOf="@id/quiz_icon_three">
+                android:layout_toRightOf="@id/quiz_icon_three"
+                android:layout_toEndOf="@id/quiz_icon_three">
 
                 <RadioButton
                     android:id="@+id/radio_three_a"
@@ -172,6 +178,7 @@
                 android:id="@+id/question_four"
                 style="@style/QuizQuestion"
                 android:layout_toRightOf="@id/quiz_icon_four"
+                android:layout_toEndOf="@id/quiz_icon_four"
                 android:text="@string/question_four" />
 
             <View
@@ -184,6 +191,7 @@
                 style="@style/QuizRadioGroup"
                 android:layout_below="@id/divider_four"
                 android:layout_toRightOf="@id/quiz_icon_four"
+                android:layout_toEndOf="@id/quiz_icon_four"
                 android:orientation="vertical">
 
                 <CheckBox
@@ -223,6 +231,7 @@
                 android:id="@+id/question_five"
                 style="@style/QuizQuestion"
                 android:layout_toRightOf="@id/quiz_icon_five"
+                android:layout_toEndOf="@id/quiz_icon_five"
                 android:text="@string/question_five" />
 
             <View
@@ -234,7 +243,8 @@
                 android:id="@+id/radio_group_five"
                 style="@style/QuizRadioGroup"
                 android:layout_below="@id/divider_five"
-                android:layout_toRightOf="@id/quiz_icon_five">
+                android:layout_toRightOf="@id/quiz_icon_five"
+                android:layout_toEndOf="@id/quiz_icon_five">
 
                 <RadioButton
                     android:id="@+id/radio_five_a"
@@ -268,6 +278,7 @@
                 android:id="@+id/question_six"
                 style="@style/QuizQuestion"
                 android:layout_toRightOf="@id/quiz_icon_six"
+                android:layout_toEndOf="@id/quiz_icon_six"
                 android:text="@string/question_six" />
 
             <View
@@ -279,7 +290,8 @@
                 android:id="@+id/radio_group_six"
                 style="@style/QuizRadioGroup"
                 android:layout_below="@id/divider_six"
-                android:layout_toRightOf="@id/quiz_icon_six">
+                android:layout_toRightOf="@id/quiz_icon_six"
+                android:layout_toEndOf="@id/quiz_icon_six">
 
                 <RadioButton
                     android:id="@+id/radio_six_a"
@@ -313,6 +325,7 @@
                 android:id="@+id/question_seven"
                 style="@style/QuizQuestion"
                 android:layout_toRightOf="@id/quiz_icon_seven"
+                android:layout_toEndOf="@id/quiz_icon_seven"
                 android:text="@string/question_seven" />
 
             <View
@@ -325,6 +338,7 @@
                 style="@style/QuizRadioGroup"
                 android:layout_below="@id/divider_seven"
                 android:layout_toRightOf="@id/quiz_icon_seven"
+                android:layout_toEndOf="@id/quiz_icon_seven"
                 android:orientation="vertical">
 
                 <CheckBox
