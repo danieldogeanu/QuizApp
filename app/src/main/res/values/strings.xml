@@ -2,37 +2,44 @@
     <string name="app_name" translatable="false">QuizApp</string>
     <string name="app_title">Mars Quiz</string>
 
+    <string name="question_one_index">1</string>
     <string name="question_one">What\'s the highest mountain on Mars?</string>
     <string name="question_one_a" translatable="false">Mauna Kea</string>
     <string name="question_one_b" translatable="false">Arsia Mons</string>
     <string name="question_one_c" translatable="false">Olympus Mons</string>
 
+    <string name="question_two_index">2</string>
     <string name="question_two">Mars is the _ planet from the Sun.</string>
     <string name="question_two_a">Second</string>
     <string name="question_two_b">Third</string>
     <string name="question_two_c">Fourth</string>
 
+    <string name="question_three_index">3</string>
     <string name="question_three">How many moons Mars has?</string>
     <string name="question_three_a">Two</string>
     <string name="question_three_b">Six</string>
     <string name="question_three_c">Three</string>
 
+    <string name="question_four_index">4</string>
     <string name="question_four">What\'s the name of Mars\'s moons?</string>
     <string name="question_four_a" translatable="false">Phobos</string>
     <string name="question_four_b" translatable="false">Calisto</string>
     <string name="question_four_c" translatable="false">Deimos</string>
     <string name="question_four_d" translatable="false">Miranda</string>
 
+    <string name="question_five_index">5</string>
     <string name="question_five">How long a Martian year lasts?</string>
     <string name="question_five_a">4 Earth years</string>
     <string name="question_five_b">2 Earth years</string>
     <string name="question_five_c">1 Earth year</string>
 
+    <string name="question_six_index">6</string>
     <string name="question_six">What is the temperature range on Mars?</string>
     <string name="question_six_a" translatable="false">-88°C - 58°C</string>
     <string name="question_six_b" translatable="false">-63°C - 128°C</string>
     <string name="question_six_c" translatable="false">-140°C - 30°C</string>
 
+    <string name="question_seven_index">7</string>
     <string name="question_seven">What are the gases present in Mars\'s athmosphere?</string>
     <string name="question_seven_a">Hydrogen</string>
     <string name="question_seven_b">Carbon Dioxide</string>

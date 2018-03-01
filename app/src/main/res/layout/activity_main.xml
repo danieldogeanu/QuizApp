@@ -31,7 +31,7 @@
             <TextView
                 android:id="@+id/quiz_icon_one"
                 style="@style/QuizIcon"
-                android:text="1" />
+                android:text="@string/question_one_index" />
 
             <TextView
                 android:id="@+id/question_one"
@@ -76,7 +76,7 @@
             <TextView
                 android:id="@+id/quiz_icon_two"
                 style="@style/QuizIcon"
-                android:text="2" />
+                android:text="@string/question_two_index" />
 
             <TextView
                 android:id="@+id/question_two"
@@ -121,7 +121,7 @@
             <TextView
                 android:id="@+id/quiz_icon_three"
                 style="@style/QuizIcon"
-                android:text="3" />
+                android:text="@string/question_three_index" />
 
             <TextView
                 android:id="@+id/question_three"
@@ -166,7 +166,7 @@
             <TextView
                 android:id="@+id/quiz_icon_four"
                 style="@style/QuizIcon"
-                android:text="4" />
+                android:text="@string/question_four_index" />
 
             <TextView
                 android:id="@+id/question_four"
@@ -217,7 +217,7 @@
             <TextView
                 android:id="@+id/quiz_icon_five"
                 style="@style/QuizIcon"
-                android:text="5" />
+                android:text="@string/question_five_index" />
 
             <TextView
                 android:id="@+id/question_five"
@@ -262,7 +262,7 @@
             <TextView
                 android:id="@+id/quiz_icon_six"
                 style="@style/QuizIcon"
-                android:text="6" />
+                android:text="@string/question_six_index" />
 
             <TextView
                 android:id="@+id/question_six"
@@ -307,7 +307,7 @@
             <TextView
                 android:id="@+id/quiz_icon_seven"
                 style="@style/QuizIcon"
-                android:text="7" />
+                android:text="@string/question_seven_index" />
 
             <TextView
                 android:id="@+id/question_seven"
