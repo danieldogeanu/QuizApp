@@ -24,7 +24,7 @@
 
             <TextView
                 android:id="@+id/display_progress"
-                android:text="@string/progress_text"
+                tools:text="0/7"
                 style="@style/HeaderProgress" />
 
         </RelativeLayout>
@@ -371,7 +371,7 @@
 
             <TextView
                 android:id="@+id/display_score"
-                android:text="@string/score_text"
+                tools:text="0/10"
                 style="@style/ScoreDisplay" />
 
             <TextView
