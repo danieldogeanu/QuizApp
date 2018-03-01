@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="app_name">QuizApp</string>
     <string name="app_title">Quiz Marte</string>
     <string name="question_one">Care este cel mai înalt munte de pe Marte?</string>
     <string name="question_two">Marte este a _ planetă de la Soare.</string>
@@ -30,4 +29,5 @@
     <string name="progress_text"><xliff:g id="progress">%1$s</xliff:g>/7</string>
     <string name="score_text"><xliff:g id="score">%1$s</xliff:g>/10</string>
     <string name="questions_toast"><xliff:g id="questions">%1$s</xliff:g>/7 Întrebări Completate</string>
+    <string name="mars_rover_description">Rover Marțian</string>
 </resources>

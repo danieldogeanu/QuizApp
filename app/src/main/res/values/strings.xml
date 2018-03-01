@@ -2,6 +2,8 @@
     <string name="app_name" translatable="false">QuizApp</string>
     <string name="app_title">Mars Quiz</string>
 
+    <string name="mars_rover_description">Mars Rover</string>
+
     <string name="question_one_index">1</string>
     <string name="question_one">What\'s the highest mountain on Mars?</string>
     <string name="question_one_a" translatable="false">Mauna Kea</string>
