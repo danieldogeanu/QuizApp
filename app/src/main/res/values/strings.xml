@@ -25,7 +25,7 @@
     <string name="question_four_index">4</string>
     <string name="question_four">What\'s the name of Mars\'s moons?</string>
     <string name="question_four_a" translatable="false">Phobos</string>
-    <string name="question_four_b" translatable="false">Calisto</string>
+    <string name="question_four_b" translatable="false">Callisto</string>
     <string name="question_four_c" translatable="false">Deimos</string>
     <string name="question_four_d" translatable="false">Miranda</string>
 
@@ -42,7 +42,7 @@
     <string name="question_six_c" translatable="false">-140°C - 30°C</string>
 
     <string name="question_seven_index">7</string>
-    <string name="question_seven">What are the gases present in Mars\'s athmosphere?</string>
+    <string name="question_seven">What are the gases present in Mars\'s atmosphere?</string>
     <string name="question_seven_a">Hydrogen</string>
     <string name="question_seven_b">Carbon Dioxide</string>
     <string name="question_seven_c">Oxygen</string>

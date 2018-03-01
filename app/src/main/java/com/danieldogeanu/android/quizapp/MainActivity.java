@@ -11,25 +11,20 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    /**
-     * Keep track of the number of questions answered. (max 7 questions)
-     */
-    private int questionsAnswered = 0;
+    /** Keep track of the number of questions answered. (max 7 questions) */
+    private int questionsAnswered;
 
     /**
-     * Keep track of the points scored for answered questions. Some questions may have more than one point. (max 10 ponts)
+     * Keep track of the points scored for answered questions.
+     * Some questions may have more than one point. (max 10 points)
      */
-    private int totalPoints = 0;
+    private int totalPoints;
 
-    /**
-     * Show if the result (score) was already displayed, in order to prevent readding points.
-     */
+    /** Show if the result (score) was already displayed, in order to prevent reading points. */
     private boolean wasScoreDisplayed = false;
 
 
-    /**
-     * ID Array for all RadioGroups.
-     */
+    /** ID Array for all RadioGroups. */
     private int[] allRadioGroups = {
             R.id.radio_group_one,
             R.id.radio_group_two,
@@ -38,9 +33,7 @@ public class MainActivity extends AppCompatActivity {
             R.id.radio_group_six
     };
 
-    /**
-     * ID Array with all the correct answers for the RadioGroups.
-     */
+    /** ID Array with all the correct answers for the RadioGroups. */
     private int[] correctRadioAnswers = {
             R.id.radio_one_c,
             R.id.radio_two_c,
@@ -49,9 +42,7 @@ public class MainActivity extends AppCompatActivity {
             R.id.radio_six_c
     };
 
-    /**
-     * ID Array with all the CheckBoxes.
-     */
+    /** ID Array with all the CheckBoxes. */
     private int[] allCheckBoxes = {
             R.id.check_four_a,
             R.id.check_four_b,
@@ -64,9 +55,7 @@ public class MainActivity extends AppCompatActivity {
             R.id.check_seven_e
     };
 
-    /**
-     * ID Array with all the correct answers for CheckBoxes.
-     */
+    /** ID Array with all the correct answers for CheckBoxes. */
     private int[] correctCheckAnswers = {
             R.id.check_four_a,
             R.id.check_four_c,
@@ -127,9 +116,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    /**
-     * Reset the color of the Score text to the default one.
-     */
+    /** Reset the color of the Score text to the default one. */
     private void resetScoreColor() {
         TextView scoreTextView = (TextView) findViewById(R.id.display_score);
         scoreTextView.setTextColor(Color.parseColor("#dedede"));
@@ -143,9 +130,7 @@ public class MainActivity extends AppCompatActivity {
         Toast.makeText(getApplicationContext(), message, Toast.LENGTH_SHORT).show();
     }
 
-    /**
-     * Increment the number of answered questions.
-     */
+    /** Increment the number of answered questions. */
     private void incrementQuestions() {
         if (questionsAnswered < 7) {
             questionsAnswered++;
@@ -154,9 +139,7 @@ public class MainActivity extends AppCompatActivity {
         showToast(getString(R.string.questions_toast, questions));
     }
 
-    /**
-     * Reset the number of answered questions.
-     */
+    /** Reset the number of answered questions. */
     private void resetQuestions() {
         questionsAnswered = 0;
     }
@@ -171,9 +154,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    /**
-     * Reset the number of points.
-     */
+    /** Reset the number of points. */
     private void resetPoints() {
         totalPoints = 0;
     }
@@ -213,7 +194,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * Set on checked changed listeners for all the RadioGroups, so that when a question is answered, the progress number is incremented.
+     * Set on checked changed listeners for all the RadioGroups,
+     * so that when a question is answered, the progress number is incremented.
      */
     protected void setRadioListeners() {
         for (int groupID : allRadioGroups) {
@@ -234,18 +216,13 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    /**
-     * State variable for setCheckListeners() method.
-     */
-    private int checkGroupFourAnswered = 0;
+    /** State variables for setCheckListeners() method. */
+    private int checkGroupFourAnswered;
+    private int checkGroupSevenAnswered;
 
     /**
-     * State variable for setCheckListeners() method.
-     */
-    private int checkGroupSevenAnswered = 0;
-
-    /**
-     * Set on click listeners for all the CheckBoxes, so that when a question is answered, the progress number is incremented.
+     * Set on click listeners for all the CheckBoxes,
+     * so that when a question is answered, the progress number is incremented.
      */
     protected void setCheckListeners() {
         for (int checkID : allCheckBoxes) {
@@ -278,17 +255,13 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    /**
-     * Reset the state variables for setCheckListeners() method.
-     */
+    /** Reset the state variables for setCheckListeners() method. */
     private void resetCheckAnswers() {
         checkGroupFourAnswered = 0;
         checkGroupSevenAnswered = 0;
     }
 
-    /**
-     * Clears all RadioButtons from all RadioGroups.
-     */
+    /** Clears all RadioButtons from all RadioGroups. */
     private void clearRadioAnswers() {
         for (int groupID : allRadioGroups) {
             RadioGroup thisRadioGroup = (RadioGroup) findViewById(groupID);
@@ -296,9 +269,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    /**
-     * Clears all CheckBoxes for all questions.
-     */
+    /** Clears all CheckBoxes for all questions. */
     private void clearCheckAnswers() {
         for (int checkID : allCheckBoxes) {
             CheckBox thisCheckBox = (CheckBox) findViewById(checkID);
