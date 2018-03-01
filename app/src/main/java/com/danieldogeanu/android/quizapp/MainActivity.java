@@ -144,13 +144,10 @@ public class MainActivity extends AppCompatActivity {
         questionsAnswered = 0;
     }
 
-    /**
-     * Add points to the total score.
-     * @param points Number of points to add.
-     */
-    private void addPoints(int points) {
+    /** Add points to the total score. */
+    private void addPoint() {
         if (totalPoints < 10) {
-            totalPoints += points;
+            totalPoints++;
         }
     }
 
@@ -170,7 +167,7 @@ public class MainActivity extends AppCompatActivity {
 
             for (int correctAnswer : correctRadioAnswers) {
                 if (selectedAnswer == correctAnswer) {
-                    addPoints(1);
+                    addPoint();
                 }
             }
         }
@@ -187,7 +184,7 @@ public class MainActivity extends AppCompatActivity {
 
             for (int correctAnswer : correctCheckAnswers) {
                 if (isAnswered && checkID == correctAnswer) {
-                    addPoints(1);
+                    addPoint();
                 }
             }
         }
