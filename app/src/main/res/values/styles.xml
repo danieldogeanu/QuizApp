@@ -21,6 +21,10 @@
         <item name="android:layout_marginBottom">8dp</item>
     </style>
 
+    <style name="HeaderCardLargerScreens" parent="@style/HeaderCard">
+        <item name="android:layout_marginBottom">16dp</item>
+    </style>
+
     <style name="HeaderImage">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">match_parent</item>
@@ -28,6 +32,10 @@
         <item name="android:layout_marginLeft">20dp</item>
         <item name="android:layout_marginRight">20dp</item>
         <item name="android:scaleType">fitCenter</item>
+    </style>
+
+    <style name="HeaderImageTablets" parent="@style/HeaderImage">
+        <item name="android:layout_marginBottom">16dp</item>
     </style>
 
     <style name="HeaderTitle">
@@ -48,6 +56,10 @@
         <item name="android:background">@drawable/progress_bg</item>
         <item name="android:gravity">center</item>
         <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="HeaderProgressLargerScreens" parent="@style/HeaderProgress">
+        <item name="android:layout_marginBottom">0dp</item>
     </style>
 
     <style name="QuizCard">
