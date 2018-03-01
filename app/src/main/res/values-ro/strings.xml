@@ -31,4 +31,7 @@
     <string name="questions_toast"><xliff:g id="questions">%1$s</xliff:g>/7 Întrebări Completate</string>
     <string name="mars_rover_description">Rover Marțian</string>
     <string name="user_name_hint">Numele Tău</string>
+    <string name="score_toast_text"><xliff:g id="name">%1$s</xliff:g>, ai marcat <xliff:g id="score">%2$s</xliff:g> puncte din 10!</string>
+    <string name="reset_toast">Resetare Completă</string>
+    <string name="score_toast_text_empty_name">Ai marcat <xliff:g id="score">%1$s</xliff:g> puncte din 10!</string>
 </resources>

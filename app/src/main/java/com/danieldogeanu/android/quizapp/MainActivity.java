@@ -5,11 +5,15 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.CheckBox;
+import android.widget.EditText;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
+
+    /** Holds the user name. */
+    private String userName;
 
     /** Keep track of the number of questions answered. (max 7 questions) */
     private int questionsAnswered;
@@ -190,6 +194,23 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    /** Get the name that the user entered in the name field. */
+    private void getUserName() {
+        EditText nameField = (EditText) findViewById(R.id.name_field);
+        userName = nameField.getText().toString();
+    }
+
+    /** Reset the user name value. */
+    private void resetUserName() {
+        userName = "";
+    }
+
+    /** Clears the name field. */
+    private void clearUserName() {
+        EditText nameField = (EditText) findViewById(R.id.name_field);
+        nameField.setText("");
+    }
+
     /**
      * Set on checked changed listeners for all the RadioGroups,
      * so that when a question is answered, the progress number is incremented.
@@ -284,8 +305,18 @@ public class MainActivity extends AppCompatActivity {
      */
     public void showResults(View view) {
         if (!wasScoreDisplayed) {
+            getUserName();
             getRadioAnswers();
             getCheckAnswers();
+
+            String score = Integer.toString(totalPoints);
+            if (!userName.isEmpty()) {
+                String name = userName;
+                showToast(getString(R.string.score_toast_text, name, score));
+            } else {
+                showToast(getString(R.string.score_toast_text_empty_name, score));
+            }
+
             displayScore(totalPoints);
             changeScoreColor(totalPoints);
             wasScoreDisplayed = true;
@@ -299,13 +330,16 @@ public class MainActivity extends AppCompatActivity {
     public void resetResults(View view) {
         resetQuestions();
         resetPoints();
+        resetUserName();
         clearRadioAnswers();
         clearCheckAnswers();
+        clearUserName();
         displayProgress(questionsAnswered);
         displayScore(totalPoints);
         resetScoreColor();
         setRadioListeners();
         resetCheckAnswers();
         wasScoreDisplayed = false;
+        showToast(getString(R.string.reset_toast));
     }
 }

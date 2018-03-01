@@ -61,5 +61,8 @@
     <string name="score_text"><xliff:g id="score">%1$s</xliff:g>/10</string>
 
     <string name="questions_toast"><xliff:g id="questions">%1$s</xliff:g>/7 Answered</string>
+    <string name="score_toast_text"><xliff:g id="name">%1$s</xliff:g>, you\'ve scored <xliff:g id="score">%2$s</xliff:g> points out of 10!</string>
+    <string name="score_toast_text_empty_name">You\'ve scored <xliff:g id="score">%1$s</xliff:g> points out of 10!</string>
+    <string name="reset_toast">Reset Completed</string>
 
 </resources>
