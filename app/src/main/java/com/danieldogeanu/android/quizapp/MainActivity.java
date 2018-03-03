@@ -8,6 +8,8 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.ArrayList;
+
 public class MainActivity extends AppCompatActivity {
 
     /** Keep track of the number of questions answered. (max 7 questions) */
@@ -42,25 +44,15 @@ public class MainActivity extends AppCompatActivity {
     };
 
     /** ID Array with all the CheckBoxes. */
-    private int[] allCheckBoxes = {
-            R.id.check_four_a,
-            R.id.check_four_b,
-            R.id.check_four_c,
-            R.id.check_four_d,
-            R.id.check_seven_a,
-            R.id.check_seven_b,
-            R.id.check_seven_c,
-            R.id.check_seven_d,
-            R.id.check_seven_e
+    private int[][] allCheckBoxes = {
+            { R.id.check_four_a, R.id.check_four_b, R.id.check_four_c, R.id.check_four_d },
+            { R.id.check_seven_a, R.id.check_seven_b, R.id.check_seven_c, R.id.check_seven_d, R.id.check_seven_e }
     };
 
     /** ID Array with all the correct answers for CheckBoxes. */
-    private int[] correctCheckAnswers = {
-            R.id.check_four_a,
-            R.id.check_four_c,
-            R.id.check_seven_b,
-            R.id.check_seven_d,
-            R.id.check_seven_e
+    private int[][] correctCheckAnswers = {
+            { R.id.check_four_a, R.id.check_four_c },
+            { R.id.check_seven_b, R.id.check_seven_d, R.id.check_seven_e }
     };
 
     @Override
@@ -173,18 +165,49 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * Get all the answers from all the CheckBoxes and check to see if they're correct.
-     * If they are correct, add one point for each correct answer.
+     * Get all the answers from all the questions with checkboxes and check to see if they're correct.
+     * If they are correct, add one point for each question.
      */
     private void getCheckAnswers() {
-        for (int checkID : allCheckBoxes) {
-            CheckBox thisCheckBox = (CheckBox) findViewById(checkID);
-            boolean isAnswered = thisCheckBox.isChecked();
+        for (int i = 0; i < allCheckBoxes.length; i++) {
+            // Get the arrays with the checkboxes IDs for each question.
+            int[] checkQuestion = allCheckBoxes[i];
+            int[] correctAnswers = correctCheckAnswers[i];
 
-            for (int correctAnswer : correctCheckAnswers) {
-                if (isAnswered && checkID == correctAnswer) {
-                    addPoint();
+            // Convert correctAnswers int array into ArrayList
+            // so we can use contains() method later on it.
+            ArrayList<Integer> correctAnswersList = new ArrayList<>();
+            for (int correctAnswer : correctAnswers) {
+                correctAnswersList.add(correctAnswer);
+            }
+
+            // Create 3 ArrayLists for all selected answers, correct answers and wrong answers.
+            ArrayList<Integer> currentQuestionAnswers = new ArrayList<>();
+            ArrayList<Integer> currentCorrectAnswers = new ArrayList<>();
+            ArrayList<Integer> currentWrongAnswers = new ArrayList<>();
+
+            // Get the IDs of checked checkboxes and add them to currentQuestionAnswers.
+            for (int checkID : checkQuestion) {
+                CheckBox thisCheckBox = (CheckBox) findViewById(checkID);
+                if (thisCheckBox.isChecked()) {
+                    int currentID = thisCheckBox.getId();
+                    currentQuestionAnswers.add(currentID);
                 }
+            }
+
+            // See if the selected answers are correct or not and distribute them appropriately.
+            for (int currentAnswer : currentQuestionAnswers) {
+                if (correctAnswersList.contains(currentAnswer)) {
+                    currentCorrectAnswers.add(currentAnswer);
+                } else {
+                    currentWrongAnswers.add(currentAnswer);
+                }
+            }
+
+            // Check to see if we have any wrong answers, if we do, we bail, if we don't,
+            // we check to see if we have all the correct answers. Only then we add a point.
+            if ((currentWrongAnswers.size() == 0) && (currentCorrectAnswers.size() == correctAnswers.length)) {
+                addPoint();
             }
         }
     }
@@ -221,33 +244,35 @@ public class MainActivity extends AppCompatActivity {
      * so that when a question is answered, the progress number is incremented.
      */
     protected void setCheckListeners() {
-        for (int checkID : allCheckBoxes) {
-            CheckBox thisCheckBox = (CheckBox) findViewById(checkID);
+        for (int[] currentQuestion : allCheckBoxes) {
+            for (int checkID : currentQuestion) {
+                CheckBox thisCheckBox = (CheckBox) findViewById(checkID);
 
-            thisCheckBox.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    View thisParent = (View) v.getParent();
-                    int thisParentID = thisParent.getId();
+                thisCheckBox.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        View thisParent = (View) v.getParent();
+                        int thisParentID = thisParent.getId();
 
-                    switch (thisParentID) {
-                        case R.id.check_group_four:
-                            if (checkGroupFourAnswered < 1) {
-                                incrementQuestions();
-                                displayProgress(questionsAnswered);
-                                checkGroupFourAnswered++;
-                            }
-                            break;
-                        case R.id.check_group_seven:
-                            if (checkGroupSevenAnswered < 1) {
-                                incrementQuestions();
-                                displayProgress(questionsAnswered);
-                                checkGroupSevenAnswered++;
-                            }
-                            break;
+                        switch (thisParentID) {
+                            case R.id.check_group_four:
+                                if (checkGroupFourAnswered < 1) {
+                                    incrementQuestions();
+                                    displayProgress(questionsAnswered);
+                                    checkGroupFourAnswered++;
+                                }
+                                break;
+                            case R.id.check_group_seven:
+                                if (checkGroupSevenAnswered < 1) {
+                                    incrementQuestions();
+                                    displayProgress(questionsAnswered);
+                                    checkGroupSevenAnswered++;
+                                }
+                                break;
+                        }
                     }
-                }
-            });
+                });
+            }
         }
     }
 
@@ -267,12 +292,12 @@ public class MainActivity extends AppCompatActivity {
 
     /** Clears all CheckBoxes for all questions. */
     private void clearCheckAnswers() {
-        for (int checkID : allCheckBoxes) {
-            CheckBox thisCheckBox = (CheckBox) findViewById(checkID);
-            boolean isAnswered = thisCheckBox.isChecked();
-
-            if (isAnswered) {
-                thisCheckBox.setChecked(false);
+        for (int[] currentQuestion : allCheckBoxes) {
+            for (int checkID : currentQuestion) {
+                CheckBox thisCheckBox = (CheckBox) findViewById(checkID);
+                if (thisCheckBox.isChecked()) {
+                    thisCheckBox.setChecked(false);
+                }
             }
         }
     }
