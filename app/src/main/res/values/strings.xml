@@ -54,10 +54,10 @@
     <string name="results_btn">Show Results</string>
     <string name="reset_btn">Reset</string>
 
-    <string name="progress_text"><xliff:g id="progress">%1$s</xliff:g>/7</string>
+    <string name="progress_text"><xliff:g id="progress">%1$s</xliff:g>/10</string>
     <string name="score_text"><xliff:g id="score">%1$s</xliff:g>/10</string>
 
-    <string name="questions_toast"><xliff:g id="questions">%1$s</xliff:g>/7 Answered</string>
+    <string name="questions_toast"><xliff:g id="questions">%1$s</xliff:g>/10 Answered</string>
     <string name="score_toast">You\'ve scored <xliff:g id="score">%1$s</xliff:g> points out of 10!</string>
     <string name="reset_toast">Reset Completed</string>
     <string name="score_displayed_toast">Results already displayed!</string>

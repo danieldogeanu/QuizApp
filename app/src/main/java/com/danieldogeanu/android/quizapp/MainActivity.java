@@ -140,7 +140,7 @@ public class MainActivity extends AppCompatActivity {
 
     /** Increment the number of answered questions. */
     private void incrementQuestions() {
-        if (questionsAnswered < 7) {
+        if (questionsAnswered < 10) {
             questionsAnswered++;
         }
         String questions = Integer.toString(questionsAnswered);
