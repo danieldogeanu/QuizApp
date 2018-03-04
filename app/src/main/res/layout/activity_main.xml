@@ -7,7 +7,10 @@
 
     <LinearLayout style="@style/MainContainer">
 
-        <RelativeLayout style="@style/HeaderCard">
+        <RelativeLayout
+            android:descendantFocusability="beforeDescendants"
+            android:focusableInTouchMode="true"
+            style="@style/HeaderCard">
 
             <ImageView
                 android:src="@drawable/rover"
@@ -20,7 +23,7 @@
 
             <TextView
                 android:id="@+id/display_progress"
-                tools:text="0/10"
+                tools:text="10/10"
                 style="@style/HeaderProgress" />
 
         </RelativeLayout>
@@ -74,6 +77,8 @@
 
         <RelativeLayout
             android:id="@+id/quiz_card_two"
+            android:descendantFocusability="beforeDescendants"
+            android:focusableInTouchMode="true"
             style="@style/QuizCard">
 
             <TextView

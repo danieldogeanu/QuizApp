@@ -18,7 +18,7 @@
     <style name="HeaderCard">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">250dp</item>
-        <item name="android:layout_marginBottom">8dp</item>
+        <item name="android:layout_marginBottom">16dp</item>
     </style>
 
     <style name="HeaderCardLargerScreens" parent="@style/HeaderCard">
@@ -34,8 +34,12 @@
         <item name="android:scaleType">fitCenter</item>
     </style>
 
-    <style name="HeaderImageTablets" parent="@style/HeaderImage">
+    <style name="HeaderImageLargerScreens" parent="@style/HeaderImage">
         <item name="android:layout_marginBottom">16dp</item>
+    </style>
+
+    <style name="HeaderImageTablets" parent="@style/HeaderImage">
+        <item name="android:layout_marginBottom">32dp</item>
     </style>
 
     <style name="HeaderTitle">
@@ -48,8 +52,8 @@
     </style>
 
     <style name="HeaderProgress">
-        <item name="android:layout_width">60dp</item>
-        <item name="android:layout_height">60dp</item>
+        <item name="android:layout_width">76dp</item>
+        <item name="android:layout_height">76dp</item>
         <item name="android:layout_alignParentBottom">true</item>
         <item name="android:layout_centerHorizontal">true</item>
         <item name="android:layout_marginBottom">16dp</item>
