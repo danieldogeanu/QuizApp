@@ -9,9 +9,9 @@
     <string name="question_three_c">Trei</string>
     <string name="question_four">Care este numele sateliților naturali ai lui Marte?</string>
     <string name="question_five">Cât durează un an Marțian?</string>
-    <string name="question_five_a">4 ani Pământeni</string>
-    <string name="question_five_b">2 ani Pământeni</string>
-    <string name="question_five_c">1 an Pământean</string>
+    <string name="question_five_a">1533 zile (4,2 ani)</string>
+    <string name="question_five_b">687 zile (1,9 ani)</string>
+    <string name="question_five_c">365 zile (1 an)</string>
     <string name="question_six">Care este temperatura pe Marte?</string>
     <string name="question_seven">Ce gaze sunt prezente în atmosfera planetei Marte?</string>
     <string name="question_seven_a">Hidrogen</string>
@@ -32,4 +32,13 @@
     <string name="question_two_answer">patra</string>
     <string name="question_two_hint">Completează</string>
     <string name="score_displayed_toast">Rezultatele au fost deja afișate!</string>
+    <string name="question_eight">Care este diametrul planetei Marte?</string>
+    <string name="question_eight_a">12.742 km</string>
+    <string name="question_eight_b">6.792 km</string>
+    <string name="question_eight_c">49.244 km</string>
+    <string name="question_nine">Care este numele roverelor aflate pe Marte în momentul de față?</string>
+    <string name="question_ten">Care este înclinarea axială a planetei Marte?</string>
+    <string name="question_ten_a">23,5°</string>
+    <string name="question_ten_b">97,77°</string>
+    <string name="question_ten_c">25,2°</string>
 </resources>

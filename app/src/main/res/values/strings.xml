@@ -30,9 +30,9 @@
 
     <string name="question_five_index">5</string>
     <string name="question_five">How long a Martian year lasts?</string>
-    <string name="question_five_a">4 Earth years</string>
-    <string name="question_five_b">2 Earth years</string>
-    <string name="question_five_c">1 Earth year</string>
+    <string name="question_five_a">1533 days (4.2 years)</string>
+    <string name="question_five_b">687 days (1.9 years)</string>
+    <string name="question_five_c">365 days (1 year)</string>
 
     <string name="question_six_index">6</string>
     <string name="question_six">What is the temperature range on Mars?</string>
@@ -47,6 +47,26 @@
     <string name="question_seven_c">Oxygen</string>
     <string name="question_seven_d">Nitrogen</string>
     <string name="question_seven_e">Argon</string>
+
+    <string name="question_eight_index">8</string>
+    <string name="question_eight">What\'s the diameter of Mars?</string>
+    <string name="question_eight_a">12,742 km</string>
+    <string name="question_eight_b">6,792 km</string>
+    <string name="question_eight_c">49,244 km</string>
+
+    <string name="question_nine_index">9</string>
+    <string name="question_nine">What\'s the name of the rovers currently on Mars?</string>
+    <string name="question_nine_a">Curiosity</string>
+    <string name="question_nine_b">MAVEN</string>
+    <string name="question_nine_c">Phoenix</string>
+    <string name="question_nine_d">Opportunity</string>
+    <string name="question_nine_e">Spirit</string>
+
+    <string name="question_ten_index">10</string>
+    <string name="question_ten">What\'s the axial tilt of Mars?</string>
+    <string name="question_ten_a">23.5°</string>
+    <string name="question_ten_b">97.77°</string>
+    <string name="question_ten_c">25.2°</string>
 
     <string name="score_title">Your Score</string>
     <string name="score_points">Points</string>
