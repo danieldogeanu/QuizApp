@@ -31,4 +31,5 @@
     <string name="score_toast">Ai marcat <xliff:g id="score">%1$s</xliff:g> puncte din 10!</string>
     <string name="question_two_answer">patra</string>
     <string name="question_two_hint">Completează</string>
+    <string name="score_displayed_toast">Rezultatele au fost deja afișate!</string>
 </resources>

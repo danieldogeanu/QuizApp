@@ -383,6 +383,8 @@ public class MainActivity extends AppCompatActivity {
             displayScore(totalPoints);
             changeScoreColor(totalPoints);
             wasScoreDisplayed = true;
+        } else {
+            showToast(getString(R.string.score_displayed_toast));
         }
     }
 
