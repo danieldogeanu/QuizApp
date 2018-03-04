@@ -2,8 +2,11 @@ package com.danieldogeanu.android.quizapp;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
 import android.widget.CheckBox;
+import android.widget.EditText;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -80,6 +83,7 @@ public class MainActivity extends AppCompatActivity {
         // Attach Click Listeners for all RadioGroups and Checkboxes
         setRadioListeners();
         setCheckListeners();
+        setEditTextListeners();
     }
 
     /**
@@ -226,6 +230,25 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
+     * Get all the answers from all the EditText questions and see if they're correct.
+     * If they are, add a point for each question.
+     */
+    private void getEditTextAnswers() {
+        for (int i = 0; i < allEditTextQuestions.length; i++) {
+            int editTextID = allEditTextQuestions[i];
+            int correctAnswerID = correctEditTextAnswers[i];
+            String correctAnswer = getString(correctAnswerID);
+
+            EditText thisEditText = (EditText) findViewById(editTextID);
+            String thisAnswer = thisEditText.getText().toString();
+
+            if (thisAnswer.equals(correctAnswer)) {
+                addPoint();
+            }
+        }
+    }
+
+    /**
      * Set on checked changed listeners for all the RadioGroups,
      * so that when a question is answered, the progress number is incremented.
      */
@@ -277,6 +300,36 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    /**
+     * Set text changed listeners for all EditText questions,
+     * so that, when a question is answered, the progress number is incremented.
+     */
+    protected void setEditTextListeners() {
+        for (int editTextID : allEditTextQuestions) {
+            EditText thisEditText = (EditText) findViewById(editTextID);
+            thisEditText.addTextChangedListener(new TextWatcher() {
+                int wasAnswered = 0;
+
+                @Override
+                public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
+
+                @Override
+                public void onTextChanged(CharSequence s, int start, int before, int count) {}
+
+                @Override
+                public void afterTextChanged(Editable s) {
+                    String thisAnswer = s.toString();
+
+                    if ((!thisAnswer.isEmpty()) && (wasAnswered < 1)) {
+                        incrementQuestions();
+                        displayProgress(questionsAnswered);
+                        wasAnswered++;
+                    }
+                }
+            });
+        }
+    }
+
     /** Reset the state variables for setCheckListeners() method. */
     private void resetCheckAnswers() {
         checkGroupAnswered.clear();
@@ -302,6 +355,18 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    /** Clears all EditText fields. */
+    private void clearEditTextAnswers() {
+        for (int editTextID: allEditTextQuestions) {
+            EditText thisEditText = (EditText) findViewById(editTextID);
+            String thisAnswer = thisEditText.getText().toString();
+            if (!thisAnswer.isEmpty()) {
+                thisEditText.setText("");
+                thisEditText.clearFocus();
+            }
+        }
+    }
+
     /**
      * Show the results of the quiz, based on the answers provided.
      * This method is called when the Show Results button is clicked.
@@ -310,6 +375,7 @@ public class MainActivity extends AppCompatActivity {
         if (!wasScoreDisplayed) {
             getRadioAnswers();
             getCheckAnswers();
+            getEditTextAnswers();
 
             String score = Integer.toString(totalPoints);
             showToast(getString(R.string.score_toast, score));
@@ -329,6 +395,7 @@ public class MainActivity extends AppCompatActivity {
         resetPoints();
         clearRadioAnswers();
         clearCheckAnswers();
+        clearEditTextAnswers();
         displayProgress(questionsAnswered);
         displayScore(totalPoints);
         resetScoreColor();
