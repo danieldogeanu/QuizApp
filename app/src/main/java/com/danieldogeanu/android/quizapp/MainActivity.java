@@ -33,7 +33,9 @@ public class MainActivity extends AppCompatActivity {
             R.id.radio_group_one,
             R.id.radio_group_three,
             R.id.radio_group_five,
-            R.id.radio_group_six
+            R.id.radio_group_six,
+            R.id.radio_group_eight,
+            R.id.radio_group_ten
     };
 
     /** ID Array with all the correct answers for the RadioGroups. */
@@ -41,25 +43,30 @@ public class MainActivity extends AppCompatActivity {
             R.id.radio_one_c,
             R.id.radio_three_a,
             R.id.radio_five_b,
-            R.id.radio_six_c
+            R.id.radio_six_c,
+            R.id.radio_eight_b,
+            R.id.radio_ten_c
     };
 
     /** ID Array with all the CheckBoxes Groups (parent views) */
     private int[] checkGroupQuestions = {
             R.id.check_group_four,
-            R.id.check_group_seven
+            R.id.check_group_seven,
+            R.id.check_group_nine
     };
 
     /** ID Array with all the CheckBoxes. */
     private int[][] allCheckBoxes = {
             { R.id.check_four_a, R.id.check_four_b, R.id.check_four_c, R.id.check_four_d },
-            { R.id.check_seven_a, R.id.check_seven_b, R.id.check_seven_c, R.id.check_seven_d, R.id.check_seven_e }
+            { R.id.check_seven_a, R.id.check_seven_b, R.id.check_seven_c, R.id.check_seven_d, R.id.check_seven_e },
+            { R.id.check_nine_a, R.id.check_nine_b, R.id.check_nine_c, R.id.check_nine_d, R.id.check_nine_e }
     };
 
     /** ID Array with all the correct answers for CheckBoxes. */
     private int[][] correctCheckAnswers = {
             { R.id.check_four_a, R.id.check_four_c },
-            { R.id.check_seven_b, R.id.check_seven_d, R.id.check_seven_e }
+            { R.id.check_seven_b, R.id.check_seven_d, R.id.check_seven_e },
+            { R.id.check_nine_a, R.id.check_nine_d, R.id.check_nine_e }
     };
 
     /** ArrayList for keeping track of answered questions in setCheckListeners() method. */
