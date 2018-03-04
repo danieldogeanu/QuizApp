@@ -2,7 +2,7 @@
 
 This is just a practice app for [Google Developer Challenge Scholarship: Android Basics](https://www.udacity.com/google-scholarships). Please ignore.
 
-### [Video Demo Here](https://youtu.be/d732eSgnyS0)
+### [Video Demo Here](https://youtu.be/ozrndM4FOLs)
 
 ![QuizApp Screenshot Screen Start](https://raw.githubusercontent.com/danieldogeanu/QuizApp/master/screenshots/quiz_app_start.jpg)
 ![QuizApp Screenshot Screen End](https://raw.githubusercontent.com/danieldogeanu/QuizApp/master/screenshots/quiz_app_end.jpg)
