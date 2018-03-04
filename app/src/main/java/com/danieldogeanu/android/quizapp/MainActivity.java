@@ -43,6 +43,12 @@ public class MainActivity extends AppCompatActivity {
             R.id.radio_six_c
     };
 
+    /** ID Array with all the CheckBoxes Groups (parent views) */
+    private int[] checkGroupQuestions = {
+            R.id.check_group_four,
+            R.id.check_group_seven
+    };
+
     /** ID Array with all the CheckBoxes. */
     private int[][] allCheckBoxes = {
             { R.id.check_four_a, R.id.check_four_b, R.id.check_four_c, R.id.check_four_d },
@@ -54,6 +60,9 @@ public class MainActivity extends AppCompatActivity {
             { R.id.check_four_a, R.id.check_four_c },
             { R.id.check_seven_b, R.id.check_seven_d, R.id.check_seven_e }
     };
+
+    /** ArrayList for keeping track of answered questions in setCheckListeners() method. */
+    private ArrayList<Integer> checkGroupAnswered = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -235,10 +244,6 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    /** State variables for setCheckListeners() method. */
-    private int checkGroupFourAnswered;
-    private int checkGroupSevenAnswered;
-
     /**
      * Set on click listeners for all the CheckBoxes,
      * so that when a question is answered, the progress number is incremented.
@@ -254,22 +259,14 @@ public class MainActivity extends AppCompatActivity {
                         View thisParent = (View) v.getParent();
                         int thisParentID = thisParent.getId();
 
-                        switch (thisParentID) {
-                            case R.id.check_group_four:
-                                if (checkGroupFourAnswered < 1) {
-                                    incrementQuestions();
-                                    displayProgress(questionsAnswered);
-                                    checkGroupFourAnswered++;
-                                }
-                                break;
-                            case R.id.check_group_seven:
-                                if (checkGroupSevenAnswered < 1) {
-                                    incrementQuestions();
-                                    displayProgress(questionsAnswered);
-                                    checkGroupSevenAnswered++;
-                                }
-                                break;
+                        for (int checkGroup : checkGroupQuestions) {
+                            if ((!checkGroupAnswered.contains(checkGroup)) && (checkGroup == thisParentID)) {
+                                incrementQuestions();
+                                displayProgress(questionsAnswered);
+                                checkGroupAnswered.add(checkGroup);
+                            }
                         }
+
                     }
                 });
             }
@@ -278,8 +275,7 @@ public class MainActivity extends AppCompatActivity {
 
     /** Reset the state variables for setCheckListeners() method. */
     private void resetCheckAnswers() {
-        checkGroupFourAnswered = 0;
-        checkGroupSevenAnswered = 0;
+        checkGroupAnswered.clear();
     }
 
     /** Clears all RadioButtons from all RadioGroups. */
