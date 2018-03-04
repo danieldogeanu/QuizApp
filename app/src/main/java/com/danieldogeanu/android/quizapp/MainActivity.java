@@ -28,7 +28,6 @@ public class MainActivity extends AppCompatActivity {
     /** ID Array for all RadioGroups. */
     private int[] allRadioGroups = {
             R.id.radio_group_one,
-            R.id.radio_group_two,
             R.id.radio_group_three,
             R.id.radio_group_five,
             R.id.radio_group_six
@@ -37,7 +36,6 @@ public class MainActivity extends AppCompatActivity {
     /** ID Array with all the correct answers for the RadioGroups. */
     private int[] correctRadioAnswers = {
             R.id.radio_one_c,
-            R.id.radio_two_c,
             R.id.radio_three_a,
             R.id.radio_five_b,
             R.id.radio_six_c
@@ -63,6 +61,12 @@ public class MainActivity extends AppCompatActivity {
 
     /** ArrayList for keeping track of answered questions in setCheckListeners() method. */
     private ArrayList<Integer> checkGroupAnswered = new ArrayList<>();
+
+    /** ID Array with all EditText questions. */
+    private int[] allEditTextQuestions = { R.id.edit_text_two };
+
+    /** Array with string resources for EditText correct answers. */
+    private int[] correctEditTextAnswers = { R.string.question_two_answer };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

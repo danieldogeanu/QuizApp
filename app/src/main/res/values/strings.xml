@@ -4,8 +4,6 @@
 
     <string name="mars_rover_description">Mars Rover</string>
 
-    <string name="user_name_hint">Your Name</string>
-
     <string name="question_one_index">1</string>
     <string name="question_one">What\'s the highest mountain on Mars?</string>
     <string name="question_one_a" translatable="false">Mauna Kea</string>
@@ -13,10 +11,9 @@
     <string name="question_one_c" translatable="false">Olympus Mons</string>
 
     <string name="question_two_index">2</string>
-    <string name="question_two">Mars is the _ planet from the Sun.</string>
-    <string name="question_two_a">Second</string>
-    <string name="question_two_b">Third</string>
-    <string name="question_two_c">Fourth</string>
+    <string name="question_two">Mars is the .......... planet from the Sun.</string>
+    <string name="question_two_answer">fourth</string>
+    <string name="question_two_hint">Enter Answer</string>
 
     <string name="question_three_index">3</string>
     <string name="question_three">How many moons Mars has?</string>

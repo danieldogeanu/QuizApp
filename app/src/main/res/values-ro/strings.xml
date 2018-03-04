@@ -2,10 +2,7 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="app_title">Quiz Marte</string>
     <string name="question_one">Care este cel mai înalt munte de pe Marte?</string>
-    <string name="question_two">Marte este a _ planetă de la Soare.</string>
-    <string name="question_two_a">Doua</string>
-    <string name="question_two_b">Treia</string>
-    <string name="question_two_c">Patra</string>
+    <string name="question_two">Marte este a .......... planetă de la Soare.</string>
     <string name="question_three">Cați sateliți naturali are Marte?</string>
     <string name="question_three_a">Doi</string>
     <string name="question_three_b">Șase</string>
@@ -30,7 +27,8 @@
     <string name="score_text"><xliff:g id="score">%1$s</xliff:g>/10</string>
     <string name="questions_toast"><xliff:g id="questions">%1$s</xliff:g>/7 Întrebări Completate</string>
     <string name="mars_rover_description">Rover Marțian</string>
-    <string name="user_name_hint">Numele Tău</string>
     <string name="reset_toast">Resetare Completă</string>
     <string name="score_toast">Ai marcat <xliff:g id="score">%1$s</xliff:g> puncte din 10!</string>
+    <string name="question_two_answer">patra</string>
+    <string name="question_two_hint">Completează</string>
 </resources>

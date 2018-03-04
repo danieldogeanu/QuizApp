@@ -93,29 +93,12 @@
                 style="@style/QuizDivider"
                 android:layout_below="@id/question_two" />
 
-            <RadioGroup
-                android:id="@+id/radio_group_two"
-                style="@style/QuizRadioGroup"
+            <EditText
+                android:id="@+id/edit_text_two"
                 android:layout_below="@id/divider_two"
                 android:layout_toRightOf="@id/quiz_icon_two"
-                android:layout_toEndOf="@id/quiz_icon_two">
-
-                <RadioButton
-                    android:id="@+id/radio_two_a"
-                    style="@style/QuizRadioButton"
-                    android:text="@string/question_two_a" />
-
-                <RadioButton
-                    android:id="@+id/radio_two_b"
-                    style="@style/QuizRadioButton"
-                    android:text="@string/question_two_b" />
-
-                <RadioButton
-                    android:id="@+id/radio_two_c"
-                    style="@style/QuizRadioButton"
-                    android:text="@string/question_two_c" />
-
-            </RadioGroup>
+                android:layout_toEndOf="@id/quiz_icon_two"
+                style="@style/QuizEditText"/>
 
         </RelativeLayout>
 
