@@ -247,9 +247,9 @@ public class MainActivity extends AppCompatActivity {
             String correctAnswer = getString(correctAnswerID);
 
             EditText thisEditText = (EditText) findViewById(editTextID);
-            String thisAnswer = thisEditText.getText().toString();
+            String thisAnswer = thisEditText.getText().toString().trim();
 
-            if (thisAnswer.equals(correctAnswer)) {
+            if (thisAnswer.equalsIgnoreCase(correctAnswer)) {
                 addPoint();
             }
         }
